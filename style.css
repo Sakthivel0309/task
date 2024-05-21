@@ -1,0 +1,141 @@
+p{
+    color:red;
+}
+button{
+    color: blue;
+    cursor: pointer;
+}
+/* task 3 */
+.signal{
+    background-color: black;
+}
+.wr{
+    border: solid 1px white;
+    height: 80px;
+    width: 300px;
+    border-right: none;
+    position: relative;
+    top: 300px;
+    left: 260px;
+}
+.wl{
+    border: solid 1px white;
+    height: 80px;
+    width: 300px;
+    border-right: none;
+    border-top: none;
+    position: relative;
+    top: 300px;
+    left: 260px; 
+}
+.El{
+    border: solid 1px white;
+    height: 80px;
+    width: 300px;
+    position: relative;
+    left: 750px;
+    border-left: none;
+    top: 223px;
+}
+.Er{
+    border: solid 1px white;
+    height: 80px;
+    width: 300px;
+    position: relative;
+    left: 750px;
+    border-left: none;
+    top: 60px;
+    border-bottom: none;
+}
+.Nl{
+    border: solid 1px white;
+    height: 280px;
+    width: 90px;
+    position: relative;
+    left: 661px;
+    bottom: 300px;
+    border-bottom: none;
+}
+.Nr{
+    border: solid 1px white;
+    height: 280px;
+    width: 100px;
+    position: relative;
+    left: 560px;
+    bottom: 580px;
+    border-bottom: none;
+    border-right: none;
+}
+.Sr{
+    border: solid 1px white;
+    height: 270px;
+    width: 100px;
+    position: relative;
+    border-top: none;
+    bottom: 428px;
+    left: 560px;
+    
+}
+.Sl{
+    border: solid 1px white;
+    height: 270px;
+    width: 90px;
+    position: relative;
+    border-top: none;
+    border-left: none;
+    bottom: 700px;
+    left: 662px;
+}
+.container{
+    position: relative;
+    bottom: 1300px;
+}
+/* task 4 css */
+.square {
+    height: 150px;
+    width: 150px;
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+  }
+  .slot{
+    display: flex;
+    gap: 5px;
+  }
+  .bookingSlot{
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    gap: 10px;
+    margin-top: 20px;
+    margin-left: 200px;
+    border: 1px solid;
+    padding: 20px;
+  }
+  .number,.options{
+    height: 40px;
+    width: 250px;
+    border-radius: 10px;
+    border: 1px,solid;
+    border-color: rgb(232, 185, 185);
+    text-align: center;
+  }
+  .bookNow,.releaseNow{
+    height: 40px;
+    width: 250px;
+  }
+  .Move{
+    position: relative;
+   bottom: 600px;
+  }
+/* task 5css---- */
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}
