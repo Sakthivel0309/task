@@ -1,14 +1,14 @@
 // 1)positive or negative
 function positive(){
     var d=Number(document.querySelector(".pos").value)
-    var positive=""
+    var result=""
     if(d>0){
-        positive="positive number"
+        result="positive number"
     }
     else{
-        positive="negative number"
+        result="negative number"
     }
-    document.querySelector(".task1").innerHTML=positive
+    document.querySelector(".task1").innerHTML=result
     }
     
     // 2)greatest number
@@ -264,7 +264,7 @@ function positive(){
     })
     // q3
     document.querySelector(".CB").addEventListener("click",()=>{
-        var message="Your balance is RS.3999"
+        var message="balance is Rs.239"
         document.querySelector(".msg").innerHTML=message
     })
     document.querySelector(".Recharge").addEventListener("click",()=>{
@@ -277,3 +277,54 @@ function positive(){
         var t=document.querySelector(".getRecharge").value
         document.querySelector(".finalMsg").innerHTML=`recharged sucess ${t}`
     })
+
+    // q----1
+document.querySelector(".yes").addEventListener("click",()=>{
+    
+    let c=Number(document.querySelector(".range1").value)
+    let d=Number(document.querySelector(".range2").value)
+    for(let num=c;num<=d;num++){
+        document.querySelector(".no").innerHTML+=<p>${num}</p>;
+    }
+  
+})
+// q------2
+document.querySelector(".yes2").addEventListener("click",()=>{
+  let c=Number(document.querySelector(".multi").value)
+  let r=c
+  for(let num=1;num<=10;num++){
+    document.querySelector(".fivemulti").innerHTML+=<p>${c}*${num}=${r}</p>;
+    r+=5
+  }
+})
+// q---3
+document.querySelector(".ques2").addEventListener("click",()=>{
+    let c=Number(document.querySelector(".ques1").value)
+    let r=c
+    for(let num=1;num<=10;num++){
+      document.querySelector(".ques3").innerHTML+=<p>${c}*${num}=${r}</p>;
+      r+=c
+    }
+  })
+  // q----4
+  document.querySelector(".ques43").addEventListener("click",()=>{
+  let c=Number(document.querySelector(".ques41").value)
+  let d=Number(document.querySelector(".ques42").value)
+  let r=0
+  for(let num=c;num<=d;num++){
+       r+=num
+    }
+    document.querySelector(".ques44").innerHTML=r;
+  })
+// q-----5
+document.querySelector(".ques53").addEventListener("click",()=>{
+    let c=Number(document.querySelector(".ques51").value)
+    let d=Number(document.querySelector(".ques52").value)
+    let r=0
+    let ki=0
+    for(let num=c;num<=d;num++){
+         r+=num;
+         ki++; 
+      }
+      document.querySelector(".ques54").innerHTML=r/(ki);
+    })  

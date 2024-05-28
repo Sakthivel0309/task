@@ -5,17 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
 </head>
 <body>
     <h1>TASK 1</h1>
     <div>
-        <label for="">1-Positive or negative</label>
+        <label for="">Positive or negative</label>
         <input class="pos" type="number" name="" id="">
         <button onclick="positive()">Check</button>
         <p class="task1"></p>
     </div>
     <div>
-        <label for="">2-Greatest Number</label>
+        <label for="">Greatest Number</label>
         <input class="greatNum1" type="number" size="1">
         <input class="greatNum2" type="number" size="1">
         <button onclick="greatest()">Check</button>
@@ -167,12 +170,13 @@
     <button class="singleDigit">check</button>
     <p class="finalAnswer"></p>
   </div>
+</div>
   <div>
-    <h1>3-ChatBot</h1>
+    <h1>CHAT BOX</h1>
     <div>
-        <h1>Hi,How may I help you?</h1>
-        <button class="CB">check balance</button>
-        <button class="Recharge">Recharge</button>
+        <h1>Hi,How may I help you ???</h1>
+        <button class="CB">Check Your balance</button>
+        <button class="Recharge">Recharge Here</button>
         <p class="msg show"></p>
 
         <div class="Recharged hide">
@@ -186,5 +190,198 @@
   <hr>
  </div>
     <script src="index.js"></script>
+    <div>
+        <h2>Switch</h2>
+        <div class="row m-4">
+            <div class="col">
+                <input type="number" id="calcNum1" class="form-control" placeholder="Number 1"/>
+                <input type="number" id="calcNum2" class="form-control" placeholder="Number 2"/>
+                <input type="text" id="calcCategory" class="form-control" placeholder="Enter the Category"/>
+            </div>
+            <div class="row">
+                <select id="calcCatSelect" onchange="getResultOnChange()" class="form-select">
+                    <option>--Select--</option>
+                    <option value="add">Add</option>
+                    <option value="sub">Sub</option>
+                    <option value="mul">Mul</option>
+                    <option value="div">Div</option>
+                </select>
+            </div>
+        <div class="row m-3">
+            <div class="col"><button type="button" class="btn btn-primary" onclick="freeTypeCalc()">Get Result</button></div>
+            <div class="col"><button type="button" class="btn btn-primary" onclick="calc('add')">Add</button></div>
+            <div class="col"><button type="button" class="btn btn-primary" onclick="calc('sub')">Sub</button></div>
+            <div class="col"><button type="button" class="btn btn-primary" onclick="calc('mul')">Mul</button></div>
+            <div class="col"><button type="button" class="btn btn-primary" onclick="calc('div')">Div</button></div>
+        </div>
+    </div>
+    <div class="row m-2">
+        <div class="col">
+            <p>sakthi</p>
+            <p>vel</p>
+        </div>
+        
+    </div>
+        <div class="row m-4">
+            <span id="calcMsg"></span>
+        </div>
+        <script>
+            function getResultOnChange(){
+                let calcCategory = document.getElementById('calcCatSelect').value;
+                calc(calcCategory);
+            }
+            function freeTypeCalc(){
+                let calcCategory = document.getElementById('calcCategory').value;
+                calc(calcCategory);
+            }
+            function calc(category){
+                let calcNum1 = Number(document.getElementById('calcNum1').value);
+                let calcNum2 = Number(document.getElementById('calcNum2').value);
+                let result = 0;
+                switch(category){
+                    case 'add':
+                        result = calcNum1 + calcNum2;
+                        console.log(result);
+                        break;
+                    case 'sub':
+                        result = calcNum1 - calcNum2;
+                        console.log(result);
+                        break;
+                    case 'mul':
+                        result = calcNum1 * calcNum2;
+                        console.log(result);
+                        break;
+                    case 'div':
+                        result = calcNum1 / calcNum2;
+                        console.log(result);
+                        break;
+                    default:
+                        result = "Invalid Category. Please give either add/sub/mul/div";
+                }
+                document.getElementById('calcMsg').innerHTML = result;
+            }
+        </script>
+    </div>
+            <div class="row m-4">
+                <div class="col"> hi,How may I help You <br> 1.Recharge Here <br>2.Check Balance</div>
+            </div>
+            <div class="row m-4">
+                <div class="col"> <input type="text" id="ip"><button type="button" id="click" onclick="btn()">click</button></div>   
+            </div>
+            <div class="row m-4">
+                <div class="col"></div>
+                <span id="op"></span>
+            </div>
+    <script>
+        function btn(){
+            let a=document.getElementById("ip").value;
+            let msg="";
+            if(a==1){
+                msg="<input type='text' id='rec_ip'><button type='button' id='recharge' onclick='rec()'>Recharge</button>";
+            }else if(a==2){
+                msg="Your Balance is Rs.239";
+            }
+            else{
+                msg="invalid option,Please give 1 or 2";
+            }
+            document.getElementById("op").innerHTML=msg;
+        }
+        function rec(){
+            let a=document.getElementById("rec_ip").value;
+            let msg="";
+            if(a!=0){
+                msg="Your Recharge is successful for amount: "+a;
+            }
+            document.getElementById("op").innerHTML=msg;
+        }
+    </script>
+<div>
+    <div class="row m-4">
+        <div class="col"><input type="number" id="ip"></div>
+    </div>
+    <div class="row m-4">
+        <div class="col"><button type="button" id="btn" onclick="fun()">click</button></div>
+        <span id="opp"></span>
+    </div>
+    <script>
+        function fun(){
+            let number=Number(document.getElementById("ip").value);
+            
+            let numStr = number.toString();
+            let sum="";
+            for (let char of numStr) {
+                sum += parseInt(char, 10);
+            }
+        document.getElementById("opp").innerHTML=sum;
+
+        }
+    </script>
+</div>
+<div>
+    <div class="row m-4">
+        <div class="col"><input type="number" id="ip1"></div>
+        <div class="col"><input type="number" id="ip2"></div>
+    </div>
+    <div class="row m-4">
+        <div class="col"><button type="button" id="btn" onclick="func()">click</button></div>
+        <span id="op1"></span>
+    </div>
+    <script>
+        function func(){
+            let start=Number(document.getElementById("ip1").value);
+            let end=Number(document.getElementById("ip2").value);
+
+            let sum="";
+            for (let even = start; even <= end; even += 2) {
+                console.log(even);
+             }
+           // document.getElementById("opp").innerHTML=sum;
+        }
+    </script>
+    <!-- q------1 -->
+<div>
+    <label for="">1-Enter number 1</label>
+    <input type="text" class="range1">
+    <label for="">Enter number 2</label>
+    <input type="text" class="range2">
+    <button class="yes">check</button>
+    <p class="no"></p>
+</div>
+    
+<!-- q------2 -->
+<div>
+   <label for="">2-Enter number</label>
+   <input type="text" class="multi">
+   <button class="yes2">check</button>
+   <p class="fivemulti"></p>
+ </div>
+
+ <!-- q----3 -->
+ <div>
+    <label for="">3-Enter number</label>
+    <input type="text" class="ques1">
+    <button class="ques2">check</button>
+    <p class="ques3"></p>
+ </div>
+  <!-- q----4 -->
+  <div>
+    <label for="">4-Enter number</label>
+    <input type="text" class="ques41">
+    <label for="">Enter number</label>
+    <input type="text" class="ques42">
+    <button class="ques43">check</button>
+    <p class="ques44"></p>
+ </div>
+ <!-- q-----5 -->
+ <div>
+    <label for="">5-Enter number</label>
+    <input type="text" class="ques51">
+    <label for="">Enter number</label>
+    <input type="text" class="ques52">
+    <button class="ques53">check</button>
+    <p class="ques54"></p>
+ </div>
+</div>
+
 </body>
 </html>
