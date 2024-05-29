@@ -443,6 +443,29 @@
 </div>
 <script src="index.js"></script>
 </div>
+<div>
+    <label for="">enter the range</label>
+   <input type="text" id="stpt">
+   <input type="text" id="endpt">
+   
+   <button class="rev" onclick="rev()">check</button>
+   <p id="ansr"></p>
+   <script>
+    function rev(){
+        let stpt=document.getElementById("stpt").value;
+        let endpt=document.getElementById("endpt").value;
+        let ans="";
+        for(let num=stpt; num<=endpt; num++)
+        {
+            if (num % 2 == 0) {
+            ans = num;
+            }
+        }
+        document.getElementById("ansr").innerHTML=ans;
 
+    }
+   </script>
+
+</div>
 </body>
 </html>
