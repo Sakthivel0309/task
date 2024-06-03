@@ -465,7 +465,92 @@
 
     }
    </script>
+<div>
+    <label>pattern</label>
+    <input type="text" id="input">
+    <button id="btn" onclick="pattern()">check</button>
+    <p id="ar"></p>
+    <script>
+        function pattern(){
+            let ipp=document.getElementById("input").value;
+            let an="";
+            
+            for(let row=1;row<=5;row++){
+            for(let num=1;num<=ipp;num++){
+                an +=num;
+            }
+            an=an+"<br>";
+            
+        }
+        document.getElementById("ar").innerHTML=an;
+        }
 
+
+    </script>
+</div>
+<div>
+    <label>2.pattern</label>
+    <input type="text" id="inputs">
+    <button id="btn" onclick="patterns()">check</button>
+    <p id="arr"></p>
+    <script>
+        function patterns(){
+            let ipp=document.getElementById("inputs").value;
+            let an="";
+            let str="*"
+             for(let num=1;num<=ipp;num++){
+                an +=str.repeat(num)+"<br>";
+            } 
+            document.getElementById("arr").innerHTML=an;
+        }
+    </script>
+</div>
+<div>
+    <label>3.pattern</label>
+    <input type="text" id="inputss">
+    <button id="btn" onclick="patternss()">check</button>
+    <p id="arrr"></p>
+    <script>
+           function patternss(){
+ 
+            let l = 5; 
+        for (let i = 1; i <= l; i++) { 
+	    let str = "*"; 
+	    let space = ' '; 
+	    document.write(space.repeat((l - i)) + str.repeat(i * 2 - 1)); 
+         document.write("<br>")
+            } 
+        for (let i = l - 1; i >= 1; i--) { 
+	        let str = "*"; 
+	        let space = ' '; 
+	    document.write(space.repeat((l - i)) + str.repeat(i * 2 - 1)); 
+        document.write("<br>")
+            }
+     }
+
+
+    </script>
+    
+</div>
+<div>
+    <label>4.pattern</label>
+    <input type="text" id="inputs">
+    <button id="btn" onclick="patternsa()">check</button>
+    <p id="arrs" class="col m-3"></p>
+    <script>
+        function patternsa(){
+            let ipp=5
+            let an="";
+           // let str="*"
+            let n = 5; 
+        for (let i = 1; i <= n; i++) { 
+        let str = "* "; 
+        let space = '  '; 
+        console.log(space.repeat((n - i)) + str.repeat(i * 2 - 1)); 
+        } 
+            document.getElementById("arrs").innerHTML =+ an;
+        }
+    </script>
 </div>
 </body>
 </html>
